@@ -1,19 +1,20 @@
 <script setup lang="ts">
 const showPopup = defineModel();
-const prop = defineProps<{
-    msgMode?: boolean
+const props = defineProps<{
+    msgMode?: boolean,
+    noBackBoard?: boolean
 }>();
 </script>
 
 <template>
     <div v-if="showPopup" @click="showPopup = false" class="mask">
-        <div @click.stop class="box">
+        <div @click.stop class="box" :class="{ 'backboard': !props.noBackBoard }">
             <div class="tab">
                 <div @click="showPopup = false" class="close button button-plain">╳</div>
-                <hr v-if="prop.msgMode" class="line">
+                <hr v-if="props.msgMode" class="line">
             </div>
 
-            <div class="content" :class="{ 'pure-text-only': prop.msgMode }">
+            <div class="content" :class="{ 'pure-text-only': props.msgMode }">
                 <slot></slot>
             </div>
         </div>
@@ -37,9 +38,6 @@ const prop = defineProps<{
         padding: 5px;
         min-width: 300px;
         max-width: 90vw;
-        background-color: white;
-        border: var(--border-size) solid gray;
-        border-radius: var(--border-roundness);
 
         .tab {
             display: flex;
@@ -65,6 +63,13 @@ const prop = defineProps<{
             padding: 20px;
         }
 
+    }
+
+    .backboard {
+
+        background-color: white;
+        border: var(--border-size) solid gray;
+        border-radius: var(--border-roundness);
     }
 }
 </style>
