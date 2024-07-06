@@ -1,10 +1,7 @@
 <script setup lang="ts">
 const showPopup = defineModel();
 const prop = defineProps<{
-    msgMode?: {
-        type: boolean,
-        default: false
-    }
+    msgMode?: boolean
 }>();
 </script>
 
@@ -16,7 +13,9 @@ const prop = defineProps<{
                 <hr v-if="prop.msgMode" class="line">
             </div>
 
-            <slot></slot>
+            <div class="content" :class="{ 'pure-text-only': prop.msgMode }">
+                <slot></slot>
+            </div>
         </div>
     </div>
 </template>
@@ -37,7 +36,7 @@ const prop = defineProps<{
     .box {
         padding: 5px;
         min-width: 300px;
-        min-height: 400px;
+        max-width: 90vw;
         background-color: white;
         border: var(--border-size) solid gray;
         border-radius: var(--border-roundness);
@@ -53,6 +52,17 @@ const prop = defineProps<{
                 line-height: 20px;
                 border: unset;
             }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .pure-text-only {
+            padding: 20px;
         }
 
     }
