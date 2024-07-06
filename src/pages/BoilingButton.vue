@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import { computed, ref } from 'vue';
+import InGameHeader from '../components/InGameHeader.vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 
@@ -17,6 +18,8 @@ const carouselSrc = [
     }
 ];
 
+const hint = '瘋狂點擊加熱，前往儲藏室的按鈕熟了就會出鍋～';
+
 const clickedNum = ref(0);
 const maxClick = 10;
 const warmedUp = computed(() => {
@@ -30,6 +33,7 @@ const warmedUp = computed(() => {
 </script>
 
 <template>
+    <InGameHeader v-model="showPlot" :hint="hint"></InGameHeader>
     <PopupBox v-model="showPlot">
         <PlotCarousel :srcs="carouselSrc"></PlotCarousel>
     </PopupBox>
