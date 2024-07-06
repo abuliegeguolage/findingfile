@@ -45,7 +45,6 @@ const carouselSrc = [
 
 .guide {
     display: block;
-    margin: auto;
     width: 300px;
     background-color: unset;
     border: unset;
