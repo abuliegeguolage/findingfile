@@ -53,7 +53,7 @@ const doorResponse = (index: number) => {
                 </div>
             </RouterLink>
 
-            <ul class="door-list">
+            <ul class="flex-list">
                 <li v-for="n in doorAmount" class="door-wrapper">
                     <img src="../assets/images/item/door.png" @click="doorResponse(n)" class="door"
                         :class="{ 'disappear': foundDoor && n !== rightDoorIndex, 'giant': foundDoor && n === rightDoorIndex }">
@@ -76,10 +76,7 @@ const doorResponse = (index: number) => {
         text-align: center;
     }
 
-    .door-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    .flex-list {
 
         .door-wrapper {
             margin: 10px 0;

@@ -66,7 +66,7 @@ const turnRight = () => {
         position: absolute;
         left: 5%;
         bottom: 20px;
-        max-width: 90%;
+        width: 90%;
     }
 
     .arrow {
