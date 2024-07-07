@@ -9,7 +9,7 @@
 
 <style lang="scss" scoped>
 main {
-    margin: 100px auto;
+    margin: auto;
     width: 80vw;
 
     @media screen and (max-width: 768px) {
