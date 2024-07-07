@@ -39,16 +39,22 @@ const warmedUp = computed(() => {
     </PopupBox>
 
     <div class="container middle">
-        <RouterLink to="/darkcorridor" :class="{ 'link-disable': !warmedUp, 'link-activate': warmedUp }">
-            <button class="critical-link button" :class="{ 'button-disabled': !warmedUp, 'button-vitality': warmedUp }">
-                前往儲藏室
-            </button>
-        </RouterLink>
+        <div class="content-box">
+            <div class="pot-wrapper">
+                <RouterLink to="/darkcorridor" :class="{ 'link-disable': !warmedUp, 'link-activate': warmedUp }">
+                    <button class="critical-link button"
+                        :class="{ 'button-disabled': !warmedUp, 'button-vitality': warmedUp }">
+                        前往儲藏室
+                    </button>
+                </RouterLink>
 
-        <img class="pot" src="../assets/images/item/pot.png">
+                <img class="pot" src="../assets/images/item/pot.png">
+            </div>
 
-        <v-slider color="orange" direction="vertical" :modelValue="clickedNum" :max="maxClick" readonly trackColor="gray"
-            class="slider"></v-slider>
+            <v-slider color="orange" direction="vertical" :modelValue="clickedNum" :max="maxClick" readonly
+                trackColor="gray" class="slider"></v-slider>
+        </div>
+
 
         <button @click="() => { if (!warmedUp) { clickedNum++ } }" class="heater button"
             :class="{ 'button-disabled': warmedUp, 'button-vitality': !warmedUp }">加熱</button>
@@ -56,58 +62,34 @@ const warmedUp = computed(() => {
 </template>
 
 <style scoped lang="scss">
-.container {
+.content-box {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    height: 70vh;
 
-    @media screen and (max-width: 767px) {
-        margin-top: 18vh;
-        height: 50vh;
-    }
-
-    .link-disable {
-        margin-top: 30vh;
-
-        @media screen and (max-width: 767px) {
-            margin-top: 25vh;
-        }
-    }
-
-    .link-activate {
-        margin-top: 10vh;
-    }
-
-    .pot {
-        position: absolute;
-        top: 25%;
-        left: 35%;
-        width: 30%;
-
-        @media screen and (max-width: 767px) {
-            top: 35%;
-            left: 25%;
-            width: 50%;
-        }
-    }
-
-    .slider {
-        position: absolute;
-        top: 10%;
-        right: 30%;
-
-        @media screen and (max-width: 767px) {
-            right: 10%;
-        }
-    }
-
-    .heater {
+    .pot-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
         position: relative;
-        bottom: 0;
+        width: 300px;
+
+        .critical-link {
+            position: absolute;
+            left: 30%;
+        }
+
+        .button-disabled {
+            top: 50%;
+        }
+
+        .button-vitality {
+            top: 0;
+        }
+
+        .pot {
+            position: absolute;
+            width: 100%;
+        }
     }
 }
 </style>

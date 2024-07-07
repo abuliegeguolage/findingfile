@@ -55,6 +55,7 @@ const turnRight = () => {
 
     .actor {
         width: 400px;
+        max-width: 100%;
 
         @media screen and (max-width: 767px) {
             width: 300px;

@@ -32,6 +32,7 @@ const prop = defineProps<{
 
 <style scoped lang="scss">
 header {
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
