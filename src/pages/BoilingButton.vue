@@ -10,7 +10,7 @@ const showPlot = ref(true);
 const carouselSrc = [
     {
         img: '/src/assets/images/guide/holding_button.png',
-        speech: '我聽說首頁被收進儲藏室了，但是通往儲藏室的連結按鈕灰不溜丟的，沒辦法用……'
+        speech: '我本來要去儲藏室搜查看看，但是通往儲藏室的連結按鈕灰不溜丟的，沒辦法用……'
     },
     {
         img: '/src/assets/images/guide/holding_pot.png',

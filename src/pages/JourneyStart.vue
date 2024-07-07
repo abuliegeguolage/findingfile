@@ -9,11 +9,11 @@ const showPopup = ref(false);
 const carouselSrc = [
     {
         img: '/src/assets/images/guide/ask.png',
-        speech: '你也是來參觀這個網站的嗎？可是這裡什麼都沒有……'
+        speech: '您就是組織派來接收機密文件的人嗎？可是這裡什麼都沒有……'
     },
     {
         img: '/src/assets/images/guide/invite.png',
-        speech: '真正的首頁好像被放在其他地方，你要和我一起去找找看嗎？'
+        speech: '我們要的文件被藏到其他地方了，一起去找找吧！'
     }
 ];
 
@@ -26,7 +26,7 @@ const carouselSrc = [
         <PlotCarousel :srcs="carouselSrc">
             <template #endingButton>
                 <RouterLink to="/boilingbutton">
-                    <button class="link-button button button-vitality">好啊！</button>
+                    <button class="link-button button button-vitality">沒問題</button>
                 </RouterLink>
             </template>
         </PlotCarousel>
