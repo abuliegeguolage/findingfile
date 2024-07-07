@@ -13,6 +13,15 @@
   --shadow: 0 0 5px lightgray;
 }
 
+a {
+  color: unset;
+  text-decoration: unset;
+
+  &:active {
+    color: unset;
+  }
+}
+
 li {
   list-style: none;
 }
@@ -71,6 +80,13 @@ li {
   margin: auto;
   width: 90%;
   border: 1px solid lightgray;
+}
+
+.message-box {
+  padding: 20px;
+  background-color: rgba(224, 255, 255, .9);
+  border: var(--border-size) solid lightblue;
+  border-radius: var(--border-roundness);
 }
 
 .middle {

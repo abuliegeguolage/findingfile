@@ -26,7 +26,7 @@ const turnRight = () => {
 <template>
     <div class="wrapper">
         <img :src="prop.srcs[index]?.img" class="actor">
-        <p class="speech">
+        <p class="speech message-box">
             {{ prop.srcs[index]?.speech }}
         </p>
         <button @click="turnLeft" class="arrow leftArrow button button-vitality" :class="{ 'button-disabled': index <= 0 }">
@@ -66,11 +66,7 @@ const turnRight = () => {
         position: absolute;
         left: 5%;
         bottom: 20px;
-        padding: 20px;
         max-width: 90%;
-        background-color: rgba(224, 255, 255, .9);
-        border: var(--border-size) solid lightblue;
-        border-radius: var(--border-roundness);
     }
 
     .arrow {
