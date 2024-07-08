@@ -26,7 +26,7 @@ const carouselSrc = [
         <PlotCarousel :srcs="carouselSrc">
             <template #endingButton>
                 <RouterLink to="/boilingbutton">
-                    <button class="link-button button button-vitality">沒問題</button>
+                    沒問題
                 </RouterLink>
             </template>
         </PlotCarousel>
@@ -52,17 +52,6 @@ const carouselSrc = [
 
     &:hover {
         filter: drop-shadow(var(--shadow));
-    }
-}
-
-.link-button {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    @media screen and (max-width: 767px) {
-        right: 10px;
-        bottom: 10px;
     }
 }
 </style>

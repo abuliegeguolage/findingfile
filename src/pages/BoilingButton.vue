@@ -35,7 +35,11 @@ const warmedUp = computed(() => {
 <template>
     <InGameHeader v-model="showPlot" :hint="hint"></InGameHeader>
     <PopupBox v-model="showPlot">
-        <PlotCarousel :srcs="carouselSrc"></PlotCarousel>
+        <PlotCarousel :srcs="carouselSrc" v-model="showPlot">
+            <template #endingButton>
+                沒問題！
+            </template>
+        </PlotCarousel>
     </PopupBox>
 
     <div class="container middle">

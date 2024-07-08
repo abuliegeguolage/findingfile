@@ -2,16 +2,19 @@
 const showPopup = defineModel();
 const props = defineProps<{
     msgMode?: boolean,
-    noBackBoard?: boolean
+    noBackBoard?: boolean,
+    noLine?: boolean
 }>();
 </script>
 
 <template>
-    <div v-if="showPopup" @click="showPopup = false" class="mask">
+    <div v-if="showPopup" @click="() => {
+        if (msgMode) showPopup = false;
+    }" class="mask">
         <div @click.stop class="box" :class="{ 'backboard': !props.noBackBoard }">
-            <div class="tab">
+            <div v-if="props.msgMode" class="tab">
                 <div @click="showPopup = false" class="close button button-plain">╳</div>
-                <hr v-if="props.msgMode" class="line">
+                <hr v-if="!noLine" class="line">
             </div>
 
             <div class="content" :class="{ 'pure-text-only': props.msgMode }">

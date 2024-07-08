@@ -53,7 +53,11 @@ const grabDetermination = () => {
     <InGameHeader v-model="showPlot"></InGameHeader>
 
     <PopupBox v-model="showPlot">
-        <PlotCarousel :srcs="carouselSrc"></PlotCarousel>
+        <PlotCarousel :srcs="carouselSrc" v-model="showPlot">
+            <template #endingButton>
+                沒問題！
+            </template>
+        </PlotCarousel>
     </PopupBox>
 
     <div class="content-box middle">

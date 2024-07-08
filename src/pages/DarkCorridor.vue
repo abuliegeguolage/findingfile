@@ -38,7 +38,11 @@ watch(input, () => {
 
     <InGameHeader v-model="showPlot" :hint="hint"></InGameHeader>
     <PopupBox v-model="showPlot" :no-back-board="true">
-        <PlotCarousel :srcs="carouselSrc"></PlotCarousel>
+        <PlotCarousel :srcs="carouselSrc" v-model="showPlot">
+            <template #endingButton>
+                沒問題！
+            </template>
+        </PlotCarousel>
     </PopupBox>
 
     <div class="container">

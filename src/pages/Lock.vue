@@ -68,7 +68,11 @@ const unLocked = computed(() => {
 <template>
     <InGameHeader v-model="showPlot" :hint="hint"></InGameHeader>
     <PopupBox v-model="showPlot" :noBackBoard="true">
-        <PlotCarousel :srcs="carouselSrc"></PlotCarousel>
+        <PlotCarousel :srcs="carouselSrc" v-model="showPlot">
+            <template #endingButton>
+                試試看吧！
+            </template>
+        </PlotCarousel>
     </PopupBox>
 
     <div class="content-box">
@@ -79,7 +83,7 @@ const unLocked = computed(() => {
             </li>
         </ul>
 
-        <PopupBox v-model="isShowNote" :noBackBoard="true">
+        <PopupBox v-model="isShowNote" :msg-mode="true" :noBackBoard="true" :noLine="true">
             <div class="note" :style="{ 'background-color': notes[noteIndex].color }">
                 {{ notes[noteIndex].content }}
             </div>

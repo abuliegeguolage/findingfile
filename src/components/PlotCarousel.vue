@@ -7,8 +7,10 @@ interface Iplot {
 };
 
 const prop = defineProps<{
-    srcs: Iplot[];
+    srcs: Iplot[]
 }>();
+
+const showContainer = defineModel();
 
 const index = ref(0);
 const finalIndex = prop.srcs?.length - 1;
@@ -36,7 +38,9 @@ const turnRight = () => {
             :class="{ 'button-disabled': index >= finalIndex }">
             &gt
         </button>
-        <slot name="endingButton" v-if="index >= finalIndex" class="endingButton"></slot>
+        <button v-if="index >= finalIndex" @click="showContainer = false" class="ending-button button button-vitality">
+            <slot name="endingButton"></slot>
+        </button>
     </div>
 </template>
 
@@ -45,7 +49,7 @@ const turnRight = () => {
     position: relative;
     margin: 20px;
     margin-top: 0;
-    padding: 20px;
+    padding: 40px;
     max-width: 100%;
     height: 450px;
 
@@ -65,7 +69,7 @@ const turnRight = () => {
     .speech {
         position: absolute;
         left: 5%;
-        bottom: 20px;
+        bottom: 40px;
         width: 90%;
     }
 
@@ -83,6 +87,17 @@ const turnRight = () => {
 
     .rightArrow {
         right: 0;
+    }
+
+    .ending-button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @media screen and (max-width: 767px) {
+            right: 10px;
+            bottom: 10px;
+        }
     }
 }
 </style>
