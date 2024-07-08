@@ -34,6 +34,23 @@ li {
   list-style: none;
 }
 
+.breathing-light {
+  animation-name: glowing;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glowing {
+  from {
+    box-shadow: 0 0 0 lightgray;
+  }
+
+  to {
+    box-shadow: 0 0 10px lightgray;
+  }
+}
+
 .button {
   cursor: pointer;
   padding: 10px;

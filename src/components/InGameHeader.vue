@@ -15,7 +15,7 @@ const prop = defineProps<{
     <header>
         <div @click="showTransport = true" class="header-button transport">傳送門</div>
         <div @click="showPlot = true" class="header-button review">事件回顧</div>
-        <div @click="showHint = true" v-if="prop.hint" class="header-button hint">提示</div>
+        <div @click="showHint = true" v-if="prop.hint" class="header-button hint breathing-light">提示</div>
     </header>
     <PopupBox v-model="showTransport" :msgMode="true">
         <div class="transport-msg-box">
