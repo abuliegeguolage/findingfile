@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import InGameHeader from '../components/InGameHeader.vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
@@ -25,11 +25,15 @@ const input = ref('');
 
 const inDark = ref(true);
 
-watch(input, () => {
+const showMsg = ref(false);
+const passwordDetermination = () => {
     if (input.value === password) {
         inDark.value = false;
+    } else {
+        showMsg.value = true;
+        input.value = '';
     }
-});
+};
 
 </script>
 
@@ -57,7 +61,11 @@ watch(input, () => {
             <button @click="input = ''" class="button button-plain" :class="{ 'button-disabled': !inDark }"
                 :disabled="!inDark">重新輸入
             </button>
+            <button @click="passwordDetermination" class="confirm button button-vitality"
+                :class="{ 'button-disabled': !inDark }" :disabled="!inDark">確認
+            </button>
         </div>
+        <PopupBox v-model="showMsg" :msg-mode="true">密碼不對喔～</PopupBox>
         <RouterLink to="/guessdoor" v-show="!inDark">
             <button class="button button-vitality">繼續前進！</button>
         </RouterLink>
@@ -116,6 +124,10 @@ watch(input, () => {
             &:hover {
                 box-shadow: unset;
             }
+        }
+
+        .confirm {
+            margin-left: 10px;
         }
     }
 
