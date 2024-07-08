@@ -19,7 +19,7 @@ const prop = defineProps<{
     </header>
     <PopupBox v-model="showTransport" :msgMode="true">
         <div class="transport-msg-box">
-            <RouterLink to="/">
+            <RouterLink to="/Ending">
                 <button class="button button-vitality">傳送！</button>
             </RouterLink>
             <p>點擊上方按鈕就可以直接傳送到終點囉～</p>
