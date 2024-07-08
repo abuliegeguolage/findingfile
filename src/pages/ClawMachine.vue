@@ -13,7 +13,7 @@ const carouselSrc = [
     },
     {
         img: '/src/assets/images/guide/staring_machine.png',
-        speech: '裡面的東西看起來很可疑，夾出來看看吧！'
+        speech: '那個盒子看起來很可疑，文件一定就藏在裡面！把它夾出來看看吧！'
     }
 ];
 

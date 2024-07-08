@@ -10,6 +10,8 @@
   --border-roundness: 10px;
   --border-size: 2px;
   --glass: rgba(0, 53, 100, 0.1);
+  --msg-background: rgba(224, 255, 255, .9);
+  --msg-border: lightblue;
   --shadow: 0 0 5px lightgray;
 }
 
@@ -96,8 +98,8 @@ li {
 
 .message-box {
   padding: 20px;
-  background-color: rgba(224, 255, 255, .9);
-  border: var(--border-size) solid lightblue;
+  background-color: var(--msg-background);
+  border: var(--border-size) solid var(--msg-border);
   border-radius: var(--border-roundness);
 }
 
