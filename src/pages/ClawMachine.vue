@@ -77,7 +77,7 @@ const grabDetermination = () => {
         <button @click="grabDetermination" class="grab button button-vitality" :class="{ 'button-disabled': grabSucceed }"
             :disabled="grabSucceed">抓取</button>
 
-        <RouterLink to="/" v-show="showLink">
+        <RouterLink to="/ending" v-show="showLink">
             <button class="link button button-vitality">打開盒子</button>
         </RouterLink>
     </div>
