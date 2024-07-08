@@ -6,6 +6,7 @@ import BoilingButton from '../pages/BoilingButton.vue';
 import DarkCorridor from '../pages/DarkCorridor.vue';
 import GuessDoor from '../pages/GuessDoor.vue';
 import Lock from '../pages/Lock.vue';
+import ClawMachine from '../pages/ClawMachine.vue';
 
 const routes = [
     { path: '/', component: Home },
@@ -14,6 +15,7 @@ const routes = [
     { path: '/darkcorridor', component: DarkCorridor },
     { path: '/guessdoor', component: GuessDoor },
     { path: '/lock', component: Lock },
+    { path: '/clawmachine', component: ClawMachine }
 ]
 
 export const router = createRouter({
