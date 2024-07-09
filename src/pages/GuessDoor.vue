@@ -40,7 +40,7 @@ const doorResponse = (index: number) => {
 
 <template>
     <InGameHeader v-model="showPlot" :hint="hint"></InGameHeader>
-    <PopupBox v-model="showPlot" :no-back-board="true">
+    <PopupBox v-model="showPlot">
         <PlotCarousel :srcs="carouselSrc" v-model="showPlot">
             <template #endingButton>
                 試試看吧！

@@ -8,7 +8,8 @@ const link = '#';
     <div class="container">
         <div class="message-box">
             <div class="horn"></div>
-            {{ `我們終於找到文件啦！真的非常感謝您～\n如果這份文件能幫到組織就好了！` }}
+            我們終於找到文件啦！真的非常感謝您～<br>
+            如果這份文件能幫到組織就好了！
         </div>
         <div class="guide-wrapper">
             <img src="../assets/images/guide/holding_site.png" class="guide">

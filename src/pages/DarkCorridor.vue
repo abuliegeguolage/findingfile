@@ -14,10 +14,14 @@ const carouselSrc = [
     {
         img: '/src/assets/images/guide/seeking_light.png',
         speech: '看來是要按照某種順序點擊牆上的按鈕，才能把燈打開的樣子？'
+    },
+    {
+        img: '/src/assets/images/guide/speculate_in_dark.png',
+        speech: '按鈕上的字母好像可以排列成一個英文單字？這個單字應該和機關設計者內心深處的渴望有關……\n會做這種機關的，感覺就是個沒有工作的閒人，試著猜猜這個人會想要什麼吧！'
     }
 ];
 
-const hint = `按鈕上的字母好像可以排列成一個英文單字？\n這個單字應該和機關設計者內心深處的渴望有關……\nmoney？offer？power？到底哪個單字才能用e、f、o、r這幾個字母拼出來呢？真是個棘手的問題！`;
+const hint = `設計這種機關的人會想要什麼呢？\nmoney？offer？power？有哪個單字剛好能用e、f、o、r這幾個字母拼出來嗎？真是個棘手的問題！`;
 
 const password = 'offer';
 const buttonTextArr = ['e', 'f', 'o', 'r'];
@@ -41,7 +45,7 @@ const passwordDetermination = () => {
     <div class="dark" :class="{ 'light-up': !inDark }"></div>
 
     <InGameHeader v-model="showPlot" :hint="hint"></InGameHeader>
-    <PopupBox v-model="showPlot" :no-back-board="true">
+    <PopupBox v-model="showPlot">
         <PlotCarousel :srcs="carouselSrc" v-model="showPlot">
             <template #endingButton>
                 沒問題！

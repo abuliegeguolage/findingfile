@@ -67,7 +67,7 @@ const unLocked = computed(() => {
 
 <template>
     <InGameHeader v-model="showPlot" :hint="hint"></InGameHeader>
-    <PopupBox v-model="showPlot" :noBackBoard="true">
+    <PopupBox v-model="showPlot">
         <PlotCarousel :srcs="carouselSrc" v-model="showPlot">
             <template #endingButton>
                 試試看吧！
