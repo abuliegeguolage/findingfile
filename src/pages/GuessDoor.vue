@@ -17,7 +17,7 @@ const carouselSrc = [
     },
 ];
 
-const hint = '';
+const hint = '門太多了不知道該從何試起嗎？\n建議先點正中間的門，如果藍色提示框的訊息建議往後面找找，就可以排除前面那一半的門了！反過來也一樣～\n接著再從剩下那一半門的中間開始找，把搜查範圍一次縮小一半……很快就可以找到正確的門啦！';
 
 const doorAmount = 15;
 const rightDoorIndex = Math.floor(Math.random() * doorAmount);
@@ -104,6 +104,7 @@ const doorResponse = (index: number) => {
             }
 
             .giant {
+                cursor: default;
                 @media screen and (min-width: 768px) {
                     width: 300px;
                     ;

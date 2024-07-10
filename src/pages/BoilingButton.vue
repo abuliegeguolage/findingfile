@@ -83,7 +83,8 @@ const warmedUp = computed(() => {
         }
 
         .button-disabled {
-            top: 50%;
+            top: 18%;
+            transform: rotate(-20deg);
         }
 
         .button-vitality {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import InGameHeader from '../components/InGameHeader.vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
@@ -30,14 +30,26 @@ const input = ref('');
 const inDark = ref(true);
 
 const showMsg = ref(false);
+const guessTimes = ref(0);
 const passwordDetermination = () => {
     if (input.value === password) {
         inDark.value = false;
     } else {
         showMsg.value = true;
         input.value = '';
+        guessTimes.value++;
     }
 };
+
+const hintText = computed(() => {
+    if(!inDark.value) {
+        return '你成功了！！';
+    } else if(guessTimes.value < 3) {
+        return '按鈕可以重複點擊喔！';
+    } else {
+        return '線索不夠的話，可以試著參考上方的提示！';
+    }
+});
 
 </script>
 
@@ -54,6 +66,7 @@ const passwordDetermination = () => {
     </PopupBox>
 
     <div class="container">
+        <div class="hint-text" :style="{'color': inDark ? 'lightgray': 'gray'}">{{ hintText }}</div>
         <ul class="button-list">
             <li v-for="(text, index) in buttonTextArr" :key="index" @click="input += text"
                 class="word-button button button-plain">
@@ -93,6 +106,10 @@ const passwordDetermination = () => {
 
 .container {
     position: relative;
+    
+    .hint-text {
+        margin: 0 auto;
+    }
 
     .button-list {
         display: flex;
