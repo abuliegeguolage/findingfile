@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
-// 做好之後再加上來
-const link = '#';
+const link = 'https://pda.104.com.tw/profile/share/bGX6WlcDgJJ1s1eUvazVma52H2KpUcsj';
 </script>
 
 <template>
