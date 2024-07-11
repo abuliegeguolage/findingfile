@@ -5,15 +5,18 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 
+import illustration1 from '/src/assets/images/guide/holding_button.png';
+import illustration2 from '/src/assets/images/guide/holding_pot.png';
+
 const showPlot = ref(true);
 
 const carouselSrc = [
     {
-        img: '/src/assets/images/guide/holding_button.png',
+        img: illustration1,
         speech: '我本來要去儲藏室搜查看看，但是通往儲藏室的連結按鈕灰不溜丟的，沒辦法用……'
     },
     {
-        img: '/src/assets/images/guide/holding_pot.png',
+        img: illustration2,
         speech: '剛好這裡有一口鍋，只要把按鈕放進去加熱，煮成金黃色應該就可以用了！'
     }
 ];

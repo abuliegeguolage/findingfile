@@ -4,15 +4,18 @@ import { ref } from 'vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 
+import illustration1 from '/src/assets/images/guide/ask.png';
+import illustration2 from '/src/assets/images/guide/invite.png';
+
 const showPopup = ref(false);
 
 const carouselSrc = [
     {
-        img: '/src/assets/images/guide/ask.png',
+        img: illustration1,
         speech: '您就是組織派來接收機密文件的人嗎？可是這裡什麼都沒有……'
     },
     {
-        img: '/src/assets/images/guide/invite.png',
+        img: illustration2,
         speech: '我們要的文件被藏到其他地方了，一起去找找吧！'
     }
 ];

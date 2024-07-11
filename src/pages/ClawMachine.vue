@@ -4,15 +4,18 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 import PopupBox from '../components/PopupBox.vue';
 
+import illustration1 from '/src/assets/images/guide/saw_machine.png';
+import illustration2 from '/src/assets/images/guide/staring_machine.png';
+
 const showPlot = ref(true);
 
 const carouselSrc = [
     {
-        img: '/src/assets/images/guide/saw_machine.png',
+        img: illustration1,
         speech: '這是……一臺夾娃娃機？'
     },
     {
-        img: '/src/assets/images/guide/staring_machine.png',
+        img: illustration2,
         speech: '那個盒子看起來很可疑，文件一定就藏在裡面！把它夾出來看看吧！'
     }
 ];

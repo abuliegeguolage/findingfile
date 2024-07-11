@@ -4,15 +4,18 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 import PopupBox from '../components/PopupBox.vue';
 
+import illustration1 from '/src/assets/images/guide/astonished.png';
+import illustration2 from '/src/assets/images/guide/give_up_thinking.png';
+
 const showPlot = ref(true);
 
 const carouselSrc = [
     {
-        img: '/src/assets/images/guide/astonished.png',
+        img: illustration1,
         speech: '這裡怎麼會有這麼多門？哪一扇才是儲藏室的門啊？'
     },
     {
-        img: '/src/assets/images/guide/give_up_thinking.png',
+        img: illustration2,
         speech: '實在沒頭緒啦……乾脆敲敲門看看會不會有回應？'
     },
 ];
@@ -105,6 +108,7 @@ const doorResponse = (index: number) => {
 
             .giant {
                 cursor: default;
+
                 @media screen and (min-width: 768px) {
                     width: 300px;
                     ;

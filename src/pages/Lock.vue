@@ -4,15 +4,18 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 import PopupBox from '../components/PopupBox.vue';
 
+import illustration1 from '/src/assets/images/guide/saw_lock.png';
+import illustration2 from '/src/assets/images/guide/saw_note.png';
+
 const showPlot = ref(true);
 
 const carouselSrc = [
     {
-        img: '/src/assets/images/guide/saw_lock.png',
+        img: illustration1,
         speech: '儲藏室的門上鎖了！居然還是密碼鎖？'
     },
     {
-        img: '/src/assets/images/guide/saw_note.png',
+        img: illustration2,
         speech: '門上的便利貼說不定會有關於密碼的線索，調查看看吧！'
     }
 ];

@@ -4,19 +4,23 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 
+import illustration1 from '/src/assets/images/guide/adapting_dark.png';
+import illustration2 from '/src/assets/images/guide/seeking_light.png';
+import illustration3 from '/src/assets/images/guide/speculate_in_dark.png';
+
 const showPlot = ref(true);
 
 const carouselSrc = [
     {
-        img: '/src/assets/images/guide/adapting_dark.png',
+        img: illustration1,
         speech: '呃，這裡怎麼這麼暗啊？幾乎什麼都看不到……'
     },
     {
-        img: '/src/assets/images/guide/seeking_light.png',
+        img: illustration2,
         speech: '看來是要按照某種順序點擊牆上的按鈕，才能把燈打開的樣子？'
     },
     {
-        img: '/src/assets/images/guide/speculate_in_dark.png',
+        img: illustration3,
         speech: '按鈕上的字母好像可以排列成一個英文單字？這個單字應該和機關設計者內心深處的渴望有關……\n會做這種機關的，感覺就是個沒有工作的閒人，試著猜猜這個人會想要什麼吧！'
     }
 ];
@@ -42,9 +46,9 @@ const passwordDetermination = () => {
 };
 
 const hintText = computed(() => {
-    if(!inDark.value) {
+    if (!inDark.value) {
         return '你成功了！！';
-    } else if(guessTimes.value < 3) {
+    } else if (guessTimes.value < 3) {
         return '按鈕可以重複點擊喔！';
     } else {
         return '線索不夠的話，可以試著參考上方的提示！';
@@ -66,7 +70,7 @@ const hintText = computed(() => {
     </PopupBox>
 
     <div class="container">
-        <div class="hint-text" :style="{'color': inDark ? 'lightgray': 'gray'}">{{ hintText }}</div>
+        <div class="hint-text" :style="{ 'color': inDark ? 'lightgray' : 'gray' }">{{ hintText }}</div>
         <ul class="button-list">
             <li v-for="(text, index) in buttonTextArr" :key="index" @click="input += text"
                 class="word-button button button-plain">
@@ -106,7 +110,7 @@ const hintText = computed(() => {
 
 .container {
     position: relative;
-    
+
     .hint-text {
         margin: 0 auto;
     }
