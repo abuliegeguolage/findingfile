@@ -21,11 +21,11 @@ const carouselSrc = [
     },
     {
         img: illustration3,
-        speech: '按鈕上的字母好像可以排列成一個英文單字？這個單字應該和機關設計者內心深處的渴望有關……\n會做這種機關的，感覺就是個沒有工作的閒人，試著猜猜這個人會想要什麼吧！'
+        speech: '按鈕上的字母好像可以組合成一個英文單字？這個單字應該和機關設計者內心深處的渴望有關……\n會做這種機關的，感覺就是個沒有工作的閒人，試著猜猜這個人會想要什麼吧！'
     }
 ];
 
-const hint = `設計這種機關的人會想要什麼呢？\nmoney？offer？power？有哪個單字剛好能用e、f、o、r這幾個字母拼出來嗎？真是個棘手的問題！`;
+const hint = 'money？power？offer？\n哪個單字可以由e、f、o、r排列組合而成呢？\n真是個棘手的問題！';
 
 const password = 'offer';
 const buttonTextArr = ['e', 'f', 'o', 'r'];
@@ -45,13 +45,17 @@ const passwordDetermination = () => {
     }
 };
 
+const hintTexts = [
+    '按鈕可以重複點擊喔！',
+    '線索不夠的話，可以參考上方的提示！',
+    '掐指一算，答案應該有5個字母！'
+];
+
 const hintText = computed(() => {
     if (!inDark.value) {
         return '你成功了！！';
-    } else if (guessTimes.value < 3) {
-        return '按鈕可以重複點擊喔！';
     } else {
-        return '線索不夠的話，可以試著參考上方的提示！';
+        return hintTexts[guessTimes.value % 3];
     }
 });
 
