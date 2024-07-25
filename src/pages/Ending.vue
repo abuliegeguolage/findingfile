@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-const link = 'https://pda.104.com.tw/profile/share/bGX6WlcDgJJ1s1eUvazVma52H2KpUcsj';
+import profile from '/profile.pdf';
 </script>
 
 <template>
@@ -12,7 +11,7 @@ const link = 'https://pda.104.com.tw/profile/share/bGX6WlcDgJJ1s1eUvazVma52H2KpU
         </div>
         <div class="guide-wrapper">
             <img src="../assets/images/guide/holding_site.png" class="guide">
-            <a :href="link" class="that-file button button-plain">文件連結</a>
+            <a :href="profile" class="that-file button button-plain">文件連結</a>
         </div>
     </div>
 </template>
