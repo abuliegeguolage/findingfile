@@ -4,8 +4,8 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 import PopupBox from '../components/PopupBox.vue';
 
-import illustration1 from '/src/assets/images/guide/saw_machine.png';
-import illustration2 from '/src/assets/images/guide/staring_machine.png';
+import illustration1 from '/src/assets/images/guide/saw_machine.webp';
+import illustration2 from '/src/assets/images/guide/staring_machine.webp';
 
 const showPlot = ref(true);
 
@@ -65,8 +65,8 @@ const grabDetermination = () => {
 
     <div class="content-box middle">
 
-        <img src="../assets/images/item/box.png" class="box" :class="{ 'box-rise': grabSucceed }">
-        <img src="../assets/images/item/claw.png" ref="claw" class="claw" :class="{ 'glow': grabbing }">
+        <img src="../assets/images/item/box.webp" class="box" :class="{ 'box-rise': grabSucceed }">
+        <img src="../assets/images/item/claw.webp" ref="claw" class="claw" :class="{ 'glow': grabbing }">
 
         <div class="glass"></div>
         <button @click="() => {
@@ -100,7 +100,7 @@ const grabDetermination = () => {
     position: relative;
     width: 400px;
     height: 580px;
-    background: url(../assets/images/item/claw_machine.png) no-repeat center top;
+    background: url(../assets/images/item/claw_machine.webp) no-repeat center top;
     background-size: 150%;
 
     @media screen and (max-width: 767px) {

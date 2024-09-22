@@ -5,8 +5,8 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 
-import illustration1 from '/src/assets/images/guide/holding_button.png';
-import illustration2 from '/src/assets/images/guide/holding_pot.png';
+import illustration1 from '/src/assets/images/guide/holding_button.webp';
+import illustration2 from '/src/assets/images/guide/holding_pot.webp';
 
 const showPlot = ref(true);
 
@@ -55,7 +55,7 @@ const warmedUp = computed(() => {
                     </button>
                 </RouterLink>
 
-                <img class="pot" src="../assets/images/item/pot.png">
+                <img class="pot" src="../assets/images/item/pot.webp">
             </div>
 
             <v-slider color="orange" direction="vertical" :modelValue="clickedNum" :max="maxClick" readonly

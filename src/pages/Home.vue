@@ -4,8 +4,8 @@ import { ref } from 'vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 
-import illustration1 from '/src/assets/images/guide/ask.png';
-import illustration2 from '/src/assets/images/guide/invite.png';
+import illustration1 from '/src/assets/images/guide/ask.webp';
+import illustration2 from '/src/assets/images/guide/invite.webp';
 
 const showPopup = ref(false);
 
@@ -24,7 +24,7 @@ const carouselSrc = [
 
 <template>
     <div class="hint-text middle">點擊↓</div>
-    <img @click="showPopup = true" class="button guide middle" src="../assets/images/guide/thinking.png">
+    <img @click="showPopup = true" class="button guide middle" src="../assets/images/guide/thinking.webp">
     <PopupBox v-model="showPopup">
         <PlotCarousel :srcs="carouselSrc">
             <template #endingButton>

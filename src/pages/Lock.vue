@@ -4,8 +4,8 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 import PopupBox from '../components/PopupBox.vue';
 
-import illustration1 from '/src/assets/images/guide/saw_lock.png';
-import illustration2 from '/src/assets/images/guide/saw_note.png';
+import illustration1 from '/src/assets/images/guide/saw_lock.webp';
+import illustration2 from '/src/assets/images/guide/saw_note.webp';
 
 const showPlot = ref(true);
 
@@ -123,7 +123,7 @@ const unLocked = computed(() => {
 .content-box {
     width: 100%;
     height: 500px;
-    background: url('../assets/images/item/door_front.png') no-repeat center;
+    background: url('../assets/images/item/door_front.webp') no-repeat center;
     background-size: 40%;
 
     @media screen and (max-width: 767px) {
@@ -172,7 +172,7 @@ const unLocked = computed(() => {
         margin: 80px 45%;
         width: 300px;
         height: 150px;
-        background: white url('../assets/images/item/lock_closeup.png') no-repeat 0 -120px;
+        background: white url('../assets/images/item/lock_closeup.webp') no-repeat 0 -120px;
         background-size: 100%;
         border: var(--border-size) solid gray;
         border-radius: var(--border-roundness);
@@ -180,7 +180,7 @@ const unLocked = computed(() => {
         @media screen and (max-width: 767px) {
             margin: 100px 35%;
             width: 200px;
-            background: white url('../assets/images/item/lock_closeup.png') no-repeat 0 -50px;
+            background: white url('../assets/images/item/lock_closeup.webp') no-repeat 0 -50px;
             background-size: 100%;
         }
 

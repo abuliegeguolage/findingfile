@@ -4,8 +4,8 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 import PopupBox from '../components/PopupBox.vue';
 
-import illustration1 from '/src/assets/images/guide/astonished.png';
-import illustration2 from '/src/assets/images/guide/give_up_thinking.png';
+import illustration1 from '/src/assets/images/guide/astonished.webp';
+import illustration2 from '/src/assets/images/guide/give_up_thinking.webp';
 
 const showPlot = ref(true);
 
@@ -62,7 +62,7 @@ const doorResponse = (index: number) => {
 
             <ul class="flex-list">
                 <li v-for="n in doorAmount" class="door-wrapper">
-                    <img src="../assets/images/item/door.png" @click="doorResponse(n)" class="door"
+                    <img src="../assets/images/item/door.webp" @click="doorResponse(n)" class="door"
                         :class="{ 'disappear': foundDoor && n !== rightDoorIndex, 'giant': foundDoor && n === rightDoorIndex }">
                 </li>
             </ul>

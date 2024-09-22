@@ -10,7 +10,7 @@ import profile from '/profile.pdf';
             如果這份文件能幫到組織就好了！
         </div>
         <div class="guide-wrapper">
-            <img src="../assets/images/guide/holding_site.png" class="guide">
+            <img src="../assets/images/guide/holding_site.webp" class="guide">
             <a :href="profile" class="that-file button button-plain">文件連結</a>
         </div>
     </div>

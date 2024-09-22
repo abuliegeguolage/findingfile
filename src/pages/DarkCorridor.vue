@@ -4,9 +4,9 @@ import InGameHeader from '../components/InGameHeader.vue';
 import PopupBox from '../components/PopupBox.vue';
 import PlotCarousel from '../components/PlotCarousel.vue';
 
-import illustration1 from '/src/assets/images/guide/adapting_dark.png';
-import illustration2 from '/src/assets/images/guide/seeking_light.png';
-import illustration3 from '/src/assets/images/guide/speculate_in_dark.png';
+import illustration1 from '/src/assets/images/guide/adapting_dark.webp';
+import illustration2 from '/src/assets/images/guide/seeking_light.webp';
+import illustration3 from '/src/assets/images/guide/speculate_in_dark.webp';
 
 const showPlot = ref(true);
 
